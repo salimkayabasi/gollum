@@ -1,4 +1,4 @@
-package com.github.celepharn.gollum.gollum.util;
+package com.github.celepharn.gollum.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,10 @@ import android.view.inputmethod.InputMethodManager;
 public final class KeyboardUtil {
 
   private KeyboardUtil() {
+  }
+
+  public static void showKeyboard(Activity activity) {
+    showKeyboard(activity, null);
   }
 
   public static void showKeyboard(Activity activity, View view) {

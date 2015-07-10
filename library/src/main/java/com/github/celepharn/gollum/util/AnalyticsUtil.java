@@ -1,4 +1,4 @@
-package com.github.celepharn.gollum.gollum.util;
+package com.github.celepharn.gollum.util;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
