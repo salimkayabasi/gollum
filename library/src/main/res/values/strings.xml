@@ -1,0 +1,17 @@
+<resources>
+  <!-- Buttons -->
+  <string name="button_yes">Yes</string>
+  <string name="button_ok">OK</string>
+  <string name="button_cancel">Cancel</string>
+
+  <!-- Titles-->
+  <string name="title_error">Error!</string>
+  <string name="title_warning">Warning!</string>
+
+  <!-- Messages -->
+  <string name="msg_progress_wait">Please Wait&#8230;</string>
+  <string name="msg_login_update_need">You need to update your app before using.</string>
+  <string name="msg_todo">TODO</string>
+  <string name="please_select">Please select</string>
+  <string name="required_field">Required field</string>
+</resources>

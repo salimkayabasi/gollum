@@ -1,15 +1,13 @@
 package com.github.celepharn.gollum.example;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class MainActivityFragment extends Fragment {
+import com.github.celepharn.gollum.ui.fragment.LFragment;
+
+public class MainActivityFragment extends LFragment {
 
   public MainActivityFragment() {
   }
@@ -21,7 +19,22 @@ public class MainActivityFragment extends Fragment {
   }
 
   @Override
-  public void onActivityCreated(Bundle savedInstanceState) {
-    super.onActivityCreated(savedInstanceState);
+  protected void onRestore() {
+
+  }
+
+  @Override
+  protected void init() {
+
+  }
+
+  @Override
+  protected void onSaveState(Bundle outState) {
+
+  }
+
+  @Override
+  protected void onRestoreState(Bundle savedInstanceState) {
+
   }
 }

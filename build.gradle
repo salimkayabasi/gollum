@@ -32,11 +32,16 @@ ext {
   compileSdkVersion = 22
   buildToolsVersion = "22.0.1"
 
+  supportLibVersion = "22.2.0"
   daggerVersion = "2.0.1"
   playServicesVersion = "7.5.0"
 
+  supportLib = "com.android.support:support-v4:$supportLibVersion"
+  supportLibAppCompat = "com.android.support:appcompat-v7:$supportLibVersion"
+  supportLibDesign = "com.android.support:design:$supportLibVersion"
   playServicesAnalytics = "com.google.android.gms:play-services-analytics:$playServicesVersion"
 
+  butterKnife = 'com.jakewharton:butterknife:7.0.1'
   dagger = "com.google.dagger:dagger:$daggerVersion"
   daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
   javaxAnnotation = 'org.glassfish:javax.annotation:10.0-b28'

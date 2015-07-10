@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="LSpinner">
+    <attr name="lspinner_title" format="string"/>
+    <attr name="lspinner_hint" format="string"/>
+    <attr name="lspinner_negative_text" format="string"/>
+    <attr name="lspinner_positive_text" format="string"/>
+    <attr name="lspinner_title_color" format="color"/>
+  </declare-styleable>
+</resources>

@@ -21,12 +21,6 @@ public class AnalyticsUtil {
   private Tracker tracker = null;
 
   @Inject
-  public AnalyticsUtil(Context context, int useProfile) {
-    this.context = context;
-    tracker = GoogleAnalytics.getInstance(context).newTracker(useProfile);
-  }
-
-  @Inject
   public AnalyticsUtil(Context context, int useProfile, String buildTime, String gitSha) {
     this.context = context;
     tracker = GoogleAnalytics.getInstance(context).newTracker(useProfile);

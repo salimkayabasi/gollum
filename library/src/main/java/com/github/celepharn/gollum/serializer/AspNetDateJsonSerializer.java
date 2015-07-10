@@ -20,7 +20,8 @@ public class AspNetDateJsonSerializer implements JsonSerializer<Date>, JsonDeser
   private static final long HOUR_IN_MILLISECOND = 60L * 60 * 1000;
   private static final String minusSign = "-";
   private static final String plusSign = "+";
-  private static Pattern pattern = Pattern.compile("^/Date\\([0-9\\+-]*\\)/$");
+  private static final String patternRegex = "^/Date\\([0-9\\+-]*\\)/$";
+  private static Pattern pattern = Pattern.compile(patternRegex);
   private static DecimalFormat formatter = new DecimalFormat("#00.###");
 
   @Override
@@ -44,6 +45,7 @@ public class AspNetDateJsonSerializer implements JsonSerializer<Date>, JsonDeser
     }
     int minute = (int) (zoneOffsetMillisecond % HOUR_IN_MILLISECOND);
     int hour = (zoneOffsetMillisecond / 1000 / 60 / 60);
-    return new JsonPrimitive("/Date(" + arg0.getTime() + sign + formatter.format(hour) + formatter.format(minute) + ")/");
+    return new JsonPrimitive("/Date(" + arg0.getTime() + sign + formatter.format(hour) +
+        formatter.format(minute) + ")/");
   }
 }
