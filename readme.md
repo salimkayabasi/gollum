@@ -21,7 +21,9 @@ Add the dependency in the form
 ```css
   repositories {
       dependencies {
-            compile 'com.github.celepharn:gollum:0.0.1'
+            compile 'com.github.celepharn:gollum:VERSION'
         }
   	}
+
+  // check out jitpack badge for gollum current version
 ```

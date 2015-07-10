@@ -5,36 +5,68 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.celepharn.gollum.example.model.Student;
 import com.github.celepharn.gollum.ui.fragment.LFragment;
+import com.github.celepharn.gollum.ui.util.LDialogUtil;
+import com.github.celepharn.gollum.ui.widgets.LSpinner;
+
+import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnItemSelected;
 
 public class MainActivityFragment extends LFragment {
 
-  public MainActivityFragment() {
-  }
+    @Bind(R.id.lspinner)
+    protected LSpinner<Student> lSpinner;
+    private ArrayList<Student> studentList;
 
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                           Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_main, container, false);
-  }
+    public MainActivityFragment() {
+    }
 
-  @Override
-  protected void onRestore() {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        ButterKnife.bind(this, view);
+        return view;
+    }
 
-  }
+    private void setUpViews() {
+        studentList = new ArrayList<>();
 
-  @Override
-  protected void init() {
+        for (int i = 0; i < 4; i++) {
+            studentList.add(new Student(i, "Murat"));
+        }
+        lSpinner.setType(LSpinner.SpinnerType.MULTI);
+        lSpinner.setItems(studentList);
+    }
 
-  }
+    @OnItemSelected(R.id.lspinner)
+    void onStudentSelected() {
+        if (lSpinner.getSelectedItems().size() > 0)
+            LDialogUtil.showMessage(getActivity(), lSpinner.getSelectedItems().toString());
+    }
 
-  @Override
-  protected void onSaveState(Bundle outState) {
 
-  }
+    @Override
+    protected void onRestore() {
+        setUpViews();
+    }
 
-  @Override
-  protected void onRestoreState(Bundle savedInstanceState) {
+    @Override
+    protected void init() {
+        setUpViews();
+    }
 
-  }
+    @Override
+    protected void onSaveState(Bundle outState) {
+
+    }
+
+    @Override
+    protected void onRestoreState(Bundle savedInstanceState) {
+
+    }
 }
