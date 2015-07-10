@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.celepharn.gollum.util.KeyboardUtil;
-
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -25,6 +23,5 @@ public class MainActivityFragment extends Fragment {
   @Override
   public void onActivityCreated(Bundle savedInstanceState) {
     super.onActivityCreated(savedInstanceState);
-    KeyboardUtil.showKeyboard(getActivity());
   }
 }

@@ -26,6 +26,9 @@ dependencies {
   compile rootProject.ext.dagger
   apt rootProject.ext.daggerCompiler
   provided rootProject.ext.javaxAnnotation
+  compile 'com.google.code.gson:gson:2.3.1'
+  compile 'com.j256.ormlite:ormlite-android:4.48'
+  compile 'com.squareup:otto:1.3.7'
   compile 'com.jakewharton.timber:timber:3.1.0'
   compile 'com.google.android.gms:play-services-analytics:7.5.0'
 }
